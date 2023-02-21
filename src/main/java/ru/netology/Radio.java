@@ -4,9 +4,24 @@ public class Radio {
 
 
     private int currentVolume;          // текущая громкость
+    private int currentRadioStation;        // текущая радиостанция
 
     public int getCurrentVolume() {
         return currentVolume;
+    }
+
+    public int getCurrentRadioStation() {
+        return currentRadioStation;
+    }
+
+    public void setCurrentRadioStation(int newCurrentRadioStation) {  // установка радиостанции
+        if (newCurrentRadioStation > 9) {
+            return;
+        }
+        if (newCurrentRadioStation < 0) {
+            return;
+        }
+        currentRadioStation = newCurrentRadioStation;
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
@@ -32,22 +47,6 @@ public class Radio {
         }
     }
 
-    private int currentRadioStation;        // текущая радиостанция
-
-
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
-    }
-
-    public void setCurrentRadioStation(int newCurrentRadioStation) {  // установка радиостанции
-        if (newCurrentRadioStation > 9) {
-            return;
-        }
-        if (newCurrentRadioStation < 0) {
-            return;
-        }
-        currentRadioStation = newCurrentRadioStation;
-    }
 
     public void next() {                // следущая радиостанция
         if (currentRadioStation < 9) {

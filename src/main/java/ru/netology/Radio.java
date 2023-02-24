@@ -15,7 +15,7 @@ public class Radio {
     }
 
     public Radio(int numberOfStations) {
-        this.maxCurrentRadioStation = minCurrentRadioStation + numberOfStations - 1;minor edits
+        this.maxCurrentRadioStation = minCurrentRadioStation + numberOfStations - 1;
     }
 
     public int getCurrentVolume() {
